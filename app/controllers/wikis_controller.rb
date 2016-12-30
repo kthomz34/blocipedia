@@ -1,27 +1,30 @@
 class WikisController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @wikis = Wiki.all
+    authorize @wikis
   end
 
   def show
     @wiki = Wiki.find(params[:id])
+    authorize @wiki
   end
 
   def new
     @wiki = Wiki.new
+    authorize @wiki
   end
   
   def create
-    @wiki = Wiki.new
-    @wiki.title = params[:wiki][:title]
-    @wiki.body = params[:wiki][:body]
-    # @wiki.user_id = current_user.id
+    @wiki = Wiki.new(wiki_params)
+    @wiki.user_id = current_user.id
+    authorize @wiki
     
     if @wiki.save
       flash[:notice] = "Wiki was saved."
       redirect_to @wiki
     else
-      
       flash.now[:alert] = "There was an error saving the wiki. Please try again."
       render :new
     end
@@ -29,12 +32,13 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.find(params[:id])
+    authorize @wiki
   end
   
   def update
     @wiki = Wiki.find(params[:id])
-    @wiki.title = params[:wiki][:title]
-    @wiki.body = params[:wiki][:body]
+    authorize @wiki
+    @wiki.assign_attributes(wiki_params)
     
     if @wiki.save
       flash[:notice] = "Wiki was updated."
@@ -47,6 +51,7 @@ class WikisController < ApplicationController
   
   def destroy
     @wiki = Wiki.find(params[:id])
+    authorize @wiki
     
     if @wiki.destroy
       flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
@@ -55,5 +60,11 @@ class WikisController < ApplicationController
       flash.now[:alert] = "There was an error deleting the post."
       render :show
     end
+  end
+  
+  private
+  
+  def wiki_params
+    params.require(:wiki).permit(:title, :body, :private)
   end
 end

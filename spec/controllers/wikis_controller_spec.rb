@@ -118,6 +118,10 @@ RSpec.describe WikisController, type: :controller do
   end
   
   describe "DELETE destroy" do
+    before do 
+      my_user.admin!
+    end
+    
     it "deletes the wiki" do
       delete :destroy, {id: my_wiki.id}
       
