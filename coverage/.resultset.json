@@ -479,45 +479,6 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/blocipedia/lib/random_data.rb": [
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        6,
-        6,
-        28,
-        null,
-        null,
-        6,
-        null,
-        null,
-        1,
-        35,
-        35,
-        186,
-        null,
-        null,
-        35,
-        35,
-        null,
-        null,
-        1,
-        186,
-        186,
-        186,
-        null,
-        null
-      ],
       "/home/ubuntu/workspace/blocipedia/spec/factories/wikis.rb": [
         1,
         1,
@@ -1068,6 +1029,6 @@
         null
       ]
     },
-    "timestamp": 1483054099
+    "timestamp": 1483077358
   }
 }
