@@ -32,7 +32,8 @@ user = User.first
   user.update_attributes!(
   email: 'kurt.thomas34@gmail.com', 
   password: 'testtest',
-  confirmed_at: Date.today
+  confirmed_at: Date.today,
+  role: 'premium'
 )
 
 puts "Seed finished"

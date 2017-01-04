@@ -6,6 +6,14 @@ class User < ActiveRecord::Base
 
   has_many :wikis
   
+  after_initialize :set_role
+  
   enum role: [:standard, :premium, :admin]
   # switch to Rolify 
+  
+  private 
+  
+    def set_role
+      self.role ||= :standard
+    end
 end
