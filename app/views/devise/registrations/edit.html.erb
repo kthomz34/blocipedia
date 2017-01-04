@@ -32,12 +32,24 @@
   </div>
 
   <div class="actions">
+    </br>
     <%= f.submit "Update" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+</br>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<h4>Account Type: <%= current_user.role.capitalize %></h4>
 
-<%= link_to "Back", :back %>
+</br>
+
+<% if current_user.role == "standard" %>
+  <h5>Upgrade to premium for $10.00</h5>
+  <%= button_to "Upgrade", new_charge_path %>
+<% elsif current_user.role == "premium" %>
+  <h4>Cancel my account</h4>
+  <p><%= button_to "Downgrade", charges_downgrade_account_path, data: { confirm: "Are you sure?" }, method: :downgrade_account %></p>
+<% else current_user.role == "admin" %>
+  <h4>You're the Admin!</h4>
+<% end %>
+

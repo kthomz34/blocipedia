@@ -32,7 +32,12 @@ user = User.first
   user.update_attributes!(
   email: 'kurt.thomas34@gmail.com', 
   password: 'testtest',
+<<<<<<< HEAD
   confirmed_at: Date.today
+=======
+  confirmed_at: Date.today,
+  role: 'premium'
+>>>>>>> 31835a77a360eafabdcb4a88ccdbd9f70148cce0
 )
 
 puts "Seed finished"

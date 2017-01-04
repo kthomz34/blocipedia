@@ -1,2 +1,13 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome to the Blocipedia</h1>
+</br>
+
+<% if current_user == nil %>
+  <h3>Sign Up or Sign In to start Creating Wikis</h3>
+<% elsif current_user.role == "standard" %>
+  <h3>Create a Premium Account</h3>
+  <%= link_to "Premium", new_charge_path(@current_user), class: 'btn btn-success' %>
+<% elsif current_user.role == "premium" %>
+  <h4>Hello Big Money Spender</h4>
+<% else current_user.role == "admin" %>
+  <h4>Do What You Want</h4>
+<% end %>

@@ -448,6 +448,15 @@
         null,
         null
       ],
+      "/home/ubuntu/workspace/blocipedia/config/initializers/stripe.rb": [
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
       "/home/ubuntu/workspace/blocipedia/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -464,6 +473,8 @@
         null,
         null
       ],
+<<<<<<< HEAD
+=======
       "/home/ubuntu/workspace/blocipedia/spec/factories/users.rb": [
         1,
         1,
@@ -471,7 +482,7 @@
         1,
         null,
         null,
-        33,
+        34,
         1,
         1,
         1,
@@ -479,6 +490,7 @@
         null,
         null
       ],
+>>>>>>> 31835a77a360eafabdcb4a88ccdbd9f70148cce0
       "/home/ubuntu/workspace/blocipedia/spec/factories/wikis.rb": [
         1,
         1,
@@ -492,8 +504,11 @@
       "/home/ubuntu/workspace/blocipedia/config/routes.rb": [
         1,
         1,
+        1,
+        1,
         null,
         1,
+        null,
         null,
         1,
         null,
@@ -566,9 +581,21 @@
         null,
         1,
         null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        54,
+        null,
         null
       ],
       "/home/ubuntu/workspace/blocipedia/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/blocipedia/app/helpers/charges_helper.rb": [
         1,
         null
       ],
@@ -580,13 +607,56 @@
         1,
         null
       ],
-      "/home/ubuntu/workspace/blocipedia/app/controllers/welcome_controller.rb": [
+      "/home/ubuntu/workspace/blocipedia/app/controllers/charges_controller.rb": [
         1,
+        null,
+        1,
+        null,
         1,
         1,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
         1,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -603,6 +673,36 @@
         1,
         0,
         0,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/blocipedia/spec/controllers/welcome_controller_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/blocipedia/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         null,
         null
       ],
@@ -922,6 +1022,13 @@
         null,
         null
       ],
+      "/home/ubuntu/workspace/blocipedia/lib/amount.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/blocipedia/app/policies/wiki_policy.rb": [
         1,
         null,
@@ -1029,6 +1136,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1483132717
+=======
+    "timestamp": 1483490811
+>>>>>>> 31835a77a360eafabdcb4a88ccdbd9f70148cce0
   }
 }
