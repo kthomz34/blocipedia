@@ -24,9 +24,31 @@ users = User.all
     user:  users.sample,
     title: Faker::Lorem.sentence,
     body:  Faker::Lorem.paragraph
-    )
+  )
 end
 wikis = Wiki.all
+
+admin = User.create!(
+  email:        'admin@test.com',
+  password:     'helloworld',
+  confirmed_at: Date.today,
+  role:         'admin'
+)
+  
+premium = User.create!(
+  email:        'premium@test.com',
+  password:     'helloworld',
+  confirmed_at: Date.today,
+  role:         'premium'
+)
+
+standard = User.create!(
+  email:        'standard@test.com',
+  password:     'helloworld',
+  confirmed_at: Date.today,
+  role:         'standard'
+  )
+
 
 user = User.first
   user.update_attributes!(

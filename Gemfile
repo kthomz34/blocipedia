@@ -12,7 +12,6 @@ source 'https://rubygems.org'
  # #2
  group :development do
    gem 'sqlite3'
-   gem 'pry-rails'
    gem 'better_errors'
    gem 'binding_of_caller'
  end
@@ -23,6 +22,11 @@ source 'https://rubygems.org'
    gem 'faker'
    gem 'factory_girl_rails'
    gem 'simplecov'
+   gem 'pry-rails'
+ end
+ 
+ group :test do
+  gem 'stripe-ruby-mock'
  end
  
  # Use SCSS for stylesheets
@@ -41,3 +45,4 @@ source 'https://rubygems.org'
  gem 'figaro', '1.0'
  gem 'pundit'
  gem 'stripe'
+ 
