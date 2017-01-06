@@ -502,7 +502,7 @@
         1,
         1,
         1,
-        null,
+        1,
         null,
         1,
         null,
@@ -592,6 +592,22 @@
       ],
       "/home/ubuntu/workspace/blocipedia/app/helpers/application_helper.rb": [
         1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
         null
       ],
       "/home/ubuntu/workspace/blocipedia/app/helpers/charges_helper.rb": [
@@ -604,6 +620,7 @@
       ],
       "/home/ubuntu/workspace/blocipedia/app/helpers/wikis_helper.rb": [
         1,
+        null,
         null
       ],
       "/home/ubuntu/workspace/blocipedia/app/controllers/charges_controller.rb": [
@@ -1139,6 +1156,6 @@
         null
       ]
     },
-    "timestamp": 1483659081
+    "timestamp": 1483730190
   }
 }
