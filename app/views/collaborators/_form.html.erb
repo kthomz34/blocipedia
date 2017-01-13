@@ -1,0 +1,11 @@
+<% if current_user.premium? || current_user.admin? %>
+  
+  <%= form_for [@wiki, collaborator] do |f| %>
+  <div class="form-group">
+    <%= f.select(:user_id, @all_collaborators.collect{|w| [w.email, w.id] }) %>
+    <%= f.submit "Add collaborator", class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+  
+  
+<% end %>

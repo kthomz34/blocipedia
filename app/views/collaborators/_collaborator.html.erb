@@ -1,0 +1,10 @@
+<div class="media">
+  <div class="media-body">
+    <small>
+      <%= collaborator.user.email %>
+      <% if user_is_authorized_to_remove?(collaborator) %>
+        <%= link_to " ", [@wiki, collaborator], class: 'glyphicon glyphicon-trash', method: :delete %>
+      <% end %>
+    </small>
+  </div>
+</div>

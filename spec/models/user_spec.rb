@@ -6,6 +6,7 @@ RSpec.describe User, type: :model do
   describe "attributes" do
   
     it { is_expected.to have_many(:wikis) }
+    it { is_expected.to have_many(:collaborators) }
     
     it "responds to role" do
       expect(user).to respond_to(:role)

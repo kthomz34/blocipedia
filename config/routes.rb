@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   post 'charges/downgrade_account' => "charges#downgrade_account", :as => "downgrade_account"  
   post 'charges/new'
   
-  resources :wikis
+  resources :wikis do
+    resources :collaborators, only: [:create, :destroy]
+  end
 
   devise_for :users
   
