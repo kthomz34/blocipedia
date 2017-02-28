@@ -18,9 +18,9 @@
 
 var blocmetrics = {};
   blocmetrics.report = function(eventName){
-    var sale = {sale: { name: eventName }};
+    var event = {event: { name: eventName }};
     var request = new XMLHttpRequest();
     request.open("POST", "https://bloc-foundation-2-agrund.c9users.io/api/events", true);
     request.setRequestHeader('Content-Type', 'application/json');
-    request.send(JSON.stringify(sale));
+    request.send(JSON.stringify(event));
   };
