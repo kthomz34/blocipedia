@@ -24,3 +24,9 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<script type="text/javascript">
+  $(document).on("ready page:load", function () {
+    blocmetrics.report("User log in");
+  })
+</script>
